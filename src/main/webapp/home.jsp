@@ -12,17 +12,88 @@
 
 "></script>
 <style type="text/css">
-		a {
-			color: blue;
-		}
-		.outside{
-			margin-left:500px;
-		}
+	header{
+		width: 100%;
+		height:60px;
+		background-color:#4D98C1;
+		line-height: 60px;
+		color:white;
+		font-size: 24px
+	}
+	header a{
+		text-decoration: none;
+		font-size: 15px;
+		color: white;
+		margin-right:20px;
+		float:right;
+	}
+	.div_left{
+		float: left;
+		width: 10%;
+		height: 550px;
+		background-color: #EFF0EF;
+	}
+	.div_left div{
+		text-align: center;
+		margin-top: 20px;
+	}
+	.div_left div a{
+		text-decoration: none;
+		color: black;
+	}
+	.div_left .div_bottom{
+		margin-top:300px;
+		text-align: center;
+	}
+	.circle{
+		margin: 0 auto;
+		width:70px;
+		height: 70px;
+		border-radius: 35px;
+		background-color: #feffff;
+	}
+	table{
+		width: 800px;
+		text-align:center;
+	}
+	tr{
+		height: 40px;
+	}
+	.right{
+		margin-top:20px;
+		margin-left:200px;
+		
+	}
+	.choose{
+		height:30px;
+		line-height:30px;
+	}
+	.choose a{
+		color:blue;
+	}
+	#tr1{
+		background-color: #C3DDE6;
+	}
 </style>
 </head>
 <body>
-	<div class="outside">
+	<header>
+		&nbsp;&nbsp;&nbsp;学生信息筛选系统
+		<a href="#" class="a">退出</a>
+		<a href="#" class="a">帮助</a>
+	</header>
+	<div class="div_left">
 		<div>
+			<a href="">用户查询</a><hr>
+			<a href="#" target="myframe">用户新增</a><hr>
+		</div>
+		<div class="div_bottom">
+			<div class="circle"></div>	
+			当前登录用户
+		</div>
+	</div>   	
+	<div class="right">
+		<div class="choose">
 			方向：&nbsp;&nbsp;
 			<a class="hold">全部</a>&nbsp;
 			<a class="direction">Java开发</a>&nbsp;
@@ -30,15 +101,16 @@
 			<a class="direction">软件测试</a>&nbsp;
 			<a class="direction">web前端</a>
 		</div>
-		<div>
+		<div class="choose">
 			性别：&nbsp;&nbsp;
 			<a class="hold">全部</a>&nbsp;
 			<a class="gender">男</a>&nbsp;
 			<a class="gender">女</a>
 		</div>
+		<br>
 		<div>
-			<table border="1" id="table">
-				<tr>
+			<table border="1" cellspacing="0" id="table">
+				<tr id="tr1">
 					<th>学号</th>
 					<th>姓名</th>
 					<th>性别</th>
@@ -61,6 +133,7 @@
 				</c:forEach>
 				</tbody>
 			</table>
+			<br>
 			<a href="add.jsp">新增学生</a>
 		</div>
 	</div>
